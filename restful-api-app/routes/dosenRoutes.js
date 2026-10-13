@@ -1,10 +1,10 @@
 const express = require('express');
 const router = express.Router();
-const prodiController = require('../controllers/dosenController ');
+const prodiController = require('../controllers/dosenController');
 const cekApiKey = require('../middlewares/cekApiKey');
 
-router.get('/', dosenController.getAll);
-router.get('/:id', dosenController.getById);
-router.post('/', cekApiKey, dosenController.create);
+router.get('/', prodiController.getAll);
+router.get('/:id', prodiController.getById);
+router.post('/', cekApiKey, prodiController.create);
 
 module.exports = router;

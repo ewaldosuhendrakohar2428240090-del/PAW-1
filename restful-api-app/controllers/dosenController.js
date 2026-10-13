@@ -1,10 +1,10 @@
-const prodiModel = require('../models/dosenModels');
+const prodiModel = require('../models/dosenModel');
 const fakultasModel = require('../models/fakultasModel');
 const { errorHttp } = require('../middlewares/errorHandler');
 
 exports.getAll = (req, res) => {
   const fakultasId = req.query.fakultasId ? parseInt(req.query.fakultasId) : undefined;
-  res.json(dosenModels.getAll(fakultasId));
+  res.json(prodiModel.getAll(fakultasId));
 };
 
 exports.getById = (req, res, next) => {
